@@ -13,7 +13,7 @@
 * 界面支持白色和黑色两种主题；
 
 ## 工具架构
-基于Vue2+Electron+NodeJs开发，调用微信开发者工具的API，通过Electron-vue封装成桌面应用，可根据自己的操作系统构建对应可用的客户端。
+基于Vue2+Electron+NodeJs开发，调用微信开发者工具的API，通过Electron-vue封装成桌面应用，可根据自己的操作系统构建对应可用的客户端，支持构建macOS、Windows、Linux三个平台的客户端。
 
 ## 适用场景
 1. 单个工程项目至少有2个小程序，小程序分别对应开发/测试/生产环境，且有很多个小程序工程项目；
@@ -21,7 +21,7 @@
 3. 本地小程序工程一套代码有多个appId，要分别上传到对应appId的小程序；
 
 ## 配置思路
-1. 在需要使用的小程序工程根目录新建一个`weapp.config.json`文件，用于本工具读取和管理。
+1. 在需要使用的小程序工程根目录新建一个`weapp.config.json`文件，用于本工具读取和管理；
 2. 在小程序工程的一个现有文件里(例如`utils.ts`)导出`CURRENT_APPID`变量，用于本工具读取当前环境的appId；
 3. 微信开发者工具里的一些配置；
 
@@ -121,19 +121,19 @@ export const env = APP_INFO_MAP[CURRENT_APPID] ? APP_INFO_MAP[CURRENT_APPID].env
 ```
 
 
-## 工程命令介绍
+## 工程命令
 
-### 启动
+### 本地开发
 ```
 npm run electron:serve
 ```
 
-### 构建
+### 构建客户端
 ```
 npm run electron:build
 ```
 
-## 界面截图
+## 客户端界面截图
 ![主界面](./screenshots/01.jpg)
 ![项目管理](./screenshots/02.jpg)
 ![黑色主题](./screenshots/03.jpg)
