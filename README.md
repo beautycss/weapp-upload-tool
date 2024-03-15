@@ -1,4 +1,5 @@
 # 微信小程序上传管理界面化客户端工具
+![主界面](./screenshots/01.jpg)
 
 ## 工具介绍
 该工具是一款适用于一个工程项目有多个微信小程序，且需要上传、打开、切换管理的`可视化界面`工具。
@@ -30,7 +31,7 @@
 {
   "name": "小程序工程名称，界面Tab标签上显示的名称",
   "description": "小程序的描述",
-  "currentAppIdFilePath": "/src/utils/utils.ts", // 相对路径，`CURRENT_APPID`变量所在的文件路径
+  "currentAppIdFilePath": "/src/utils/utils.ts",
   "appList": {
     "DEV": [
       {
